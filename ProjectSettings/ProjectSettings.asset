@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 26
+  productGUID: 7b1f4c2e2d9b4a7f8c5e0d1a2b3c4d5e
+  AndroidProfiler: 0
+  usingOpenGLES1: 0
+  scriptingBackend: {}
+  targetGlesGraphics: 0
+  targetIOSGraphics: 0
+  use32BitDisplayBuffer: 1
+  preserveFramebufferAlpha: 0
+  disableDepthAndStencilBuffers: 0
+  androidStartInFullscreen: 1
+  androidRenderOutsideSafeArea: 1
+  androidUseSwappy: 1
+  androidBlitType: 0
+  AndroidResizableWindow: 0
+  androidBuildApkPerCpuArchitecture: 0
+  AndroidMinSdkVersion: 23
+  AndroidTargetSdkVersion: 0
+  AndroidPreferredInstallLocation: 1
+  aotOptions: 
+  require32BitTextures: 0
+  limitOldSystemInformation: 0
+  additionalCompilerArguments: {}
+  m_SupportedAspectRatios:
+    4:3: 1
+    5:4: 1
+    16:10: 1
+    16:9: 1
+    Others: 1
+  bundleVersion: 1.0.0
+  preloadedAssets: []
+  metroOutputName: TappBirdClickr
+  switchGCNotificationLevel: 2
+  virtualTexturingSupportEnabled: 0
+  allowedAutorotateToPortrait: 1
+  allowedAutorotateToPortraitUpsideDown: 0
+  allowedAutorotateToLandscapeRight: 0
+  allowedAutorotateToLandscapeLeft: 0
+  useOSAutorotation: 0
+  use32BitDisplayBuffer: 1
+  defaultScreenOrientation: 1
+  statusBarHidden: 1
+  iOSLaunchScreenType: 0
+  iOSLaunchScreenPortrait: {width: 0, height: 0, quality: 0}
+  iOSLaunchScreenLandscape: {width: 0, height: 0, quality: 0}
+  iOSLaunchScreenBackgroundColor:
+    serializedVersion: 2
+    rgba: 0
+  iOSLaunchScreenImageTag: 
+  iOSLaunchScreeniPadType: 4
+  iOSLaunchScreeniPadImage: {instanceID: 0}
+  iOSLaunchScreeniPadBackgroundColor:
+    serializedVersion: 2
+    rgba: 0
+  iOSLaunchScreeniPadImageTag: 
+  iOSDeviceRequirements: []
+  iOSArchitecture: 1
+  iOSScriptingBackend: 0
+  iOSLoadingActivityStyle: 0
+  appURLScheme: 
+  applicationIdentifier:
+    Standalone: com.tappbird.clickr
+    iPhone: com.tappbird.clickr
+    tvOS: com.tappbird.clickr
+    Android: com.tappbird.clickr
+  buildNumber:
+    Standalone: 1
+    iPhone: 1
+    tvOS: 1
+    Android: 1
+  overrideDefaultApplicationIdentifier: 1
+  AndroidBundleVersionCode: 1
+  AndroidMinSdkVersion: 23
+  AndroidTargetSdkVersion: 0
+  AndroidPreferredInstallLocation: 1
+  aotOptions: 
+  stripEngineCode: 1
+  iPhoneStrippingLevel: 0
+  iPhoneScriptCallOptimization: 0
+  ForceInternetPermission: 0
+  ForceSDCardPermission: 0
+  CreateWallpaper: 0
+  APKExpansionFiles: 0
+  keepLoadedShadersAlive: 0
+  StripUnusedMeshComponents: 1
+  strictShaderVariantMatching: 0
+  VertexChannelCompressionMask: 4054
+  iPhoneSdkVersion: 988
+  iOSTargetOSVersionString: 15.0
+  tvOSSdkVersion: 0
+  tvOSRequireExtendedGameController: 0
+  tvOSTargetOSVersionString: 12.0
+  enable360StereoCapture: 0
+  isONXRDeviceEnabled: 0
+  isTemplateProject: 0
+  runInBackground: 1
+  captureSingleScreen: 0
+  muteOtherAudioSources: 0
+  consoleLogToFile: 0
+  playerPrefsSupport: 1
+  enableInternalProfiler: 0
+  actionOnDotNetUnhandledException: 1
+  logObscured: 0
+  deferSystemGesturesMode: 0
+  lowMemoryResolution: 0
+  actionOnCrash: 1
+  showUnitySplashScreen: 1
+  customSplashScreen: {instanceID: 0}
+  customSplashScreenBackgroundColor:
+    serializedVersion: 2
+    rgba: 0
+  locationUsageDescription: 
+  metadataUsageDescription: 
+  gpuSkinning: 1
+  scriptingDefineSymbols:
+    Standalone: 
+    iPhone: 
+    tvOS: 
+    Android: 
+  additionalIl2CppArgs: 
+  scriptingRuntimeVersion: 1
+  gcIncremental: 1
+  gcWBarrierValidation: 0
+  apiCompatibilityLevelPerPlatform:
+    Standalone: 6
+    iPhone: 6
+    tvOS: 6
+    Android: 6
+  m_RenderingPath: 1
+  m_MobileRenderingPath: 1
+  metroPackageName: TappBirdClickr
+  metroPackageVersion: 1.0.0
+  metroCertificatePath: 
+  metroApplicationCategory: 
+  metroCertificates: []
+  metroBuildUser: 
+  metroBuildUserPassword: 
+  metroDefaultTileShortName: 
+  metroDefaultTileShowName: 0
+  metroDefaultAntiAlias: 1
+  metroForceDarkMode: 0
+  metroForceOutline: 0
+  metroShareFile: 
+  metroShareFullSize: 1
+  metroTargetDeviceFamilies: 0
+  metroSplashScreenBackgroundColor:
+    serializedVersion: 2
+    rgba: 0
+  overlayResolution: 2
+  useNativeAudioResolution: 0
+  applicationIdentifierWithTrailingDot: 0
+  requireProtectedPlayer: 0
+  protectedPlayerPath: 
+  multiThreadedRendering: 0
+  useClusterRendering: 0
+  activeInputHandler: 0
+  xboxPIXSamplingCapture: 0
+  windowsGamepadBackendHint: 0
+  cloudProjectId: 
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  webGLUseEmbeddedResources: 0
+  autoPoolLightmapArrays: 0
+  autoResolveScene: 0
+  useHDRDisplay: 0
+  MTRendering: 1
+  simultaneousJobCount: 2
+  scriptingBackend:
+    Standalone: 0
+    iPhone: 1
+    tvOS: 1
+    Android: 1
+  incrementalIl2cppBuild: {}
+  m_DefaultTrackingType: 0
+  projectNumber: 
+  mainThreadJobQuota: 0
+  customGravWellConstant: 0
+  highDynamicRangeSupport: 0
+  applicationIdentifierPrefix: 
+  disableInputManager: 0
+  runInBackground: 1
+  applicationName: Tapp Bird Clickr
+  editorDefaultScreenOrientation: 0
+  suppressCommonWizards: 0
+  m_SplashScreenMode: 0
+  overrideTouchInsets: 0
+  allowedAutorotateToLandscapeRight: 0
+  deviceFilter: 0
+  flashCodeInitialParams: 
+  mobileDeviceFilter: 0
+  staging: 0
+  keepLoadsUnloaded: 0
+  scriptAsmDefs: []
+  useContainerizedResources: 0
+  usePlayerResources: 0
+  cameraWithSafeArea: 0
+  cameraDescription: 
+  cameraUse32BitDisplayBuffer: 0
+  useLegacyVersionHandling: 0
+  ugcSettings: []
+  playerPrefsOverwrite: 1
+  playerPrefsAllowReset: 0
+  assetBundledAssets: []
+  forceSRGBBlit: 0
+  virtualRealitySupported: 0
+  m_SelectedPlatform: 4
+  m_BuildTargetGroup: 4
+  m_BuildTarget: 2
+  m_ActiveColorSpace: 1
+  m_UserScriptingDefineSymbols:

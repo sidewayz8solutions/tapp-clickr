@@ -1,0 +1,84 @@
+name: iOS build
+
+on:
+  workflow_dispatch:            # manual trigger from the Actions tab
+  push:
+    branches: [main]
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # MUST match ProjectSettings/ProjectVersion.txt
+  UNITY_VERSION: "6000.0.32f1"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15          # GitHub-hosted Apple Silicon macOS runner (has Xcode)
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ env.UNITY_VERSION }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ env.UNITY_VERSION }}-
+
+      - name: Build iOS player (Unity)
+        id: unity-build
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          unityVersion: ${{ env.UNITY_VERSION }}
+          targetPlatform: iOS
+          projectPath: .
+          buildName: TappBird
+          allowDirtyBuild: true
+
+      - name: Compile unsigned IPA via Xcode
+        shell: bash
+        run: |
+          set -euo pipefail
+          XCPROJ=$(find build -name Unity-iPhone.xcodeproj -maxdepth 3 | head -n 1)
+          echo "Xcode project: $XCPROJ"
+          test -n "$XCPROJ"
+          xcodebuild -project "$XCPROJ" \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build/derived \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            ENABLE_BITCODE=NO \
+            build
+          APP=$(find build/derived -name "*.app" -type d | head -n 1)
+          echo "App bundle: $APP"
+          test -n "$APP"
+          rm -rf build/ios/Payload
+          mkdir -p build/ios/Payload
+          cp -R "$APP" build/ios/Payload/TappBird.app
+          cd build/ios
+          zip -qr TappBird-unsigned.ipa Payload
+          cd ../..
+          echo "=== artifacts ==="
+          ls -lh build/ios
+
+      - name: Upload Xcode project
+        uses: actions/upload-artifact@v4
+        with:
+          name: Unity-iPhone-project
+          path: build/ios
+
+      - name: Upload unsigned IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: TappBird-unsigned-ipa
+          path: build/ios/TappBird-unsigned.ipa
