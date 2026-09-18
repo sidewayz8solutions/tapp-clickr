@@ -11,7 +11,7 @@ concurrency:
 
 env:
   # MUST match ProjectSettings/ProjectVersion.txt
-  UNITY_VERSION: "6000.0.32f1"
+  UNITY_VERSION: "6000.6.1f1"
 
 permissions:
   contents: read
